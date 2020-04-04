@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 
 namespace WGRDShowDestructionPoints
@@ -96,19 +92,6 @@ namespace WGRDShowDestructionPoints
 
 				Thread.Sleep(100);
 			}
-
-			/*
-			while(true)
-			{
-				unsafe
-				{
-					//int p1kills = *((int*)*((int*)*((int*)*(((int*)*(((int*)baseAddr.ToPointer()) + 0x1D1FE0C)) + 0x10)) + 0x134) + 0x30);
-					int p1kills = *((int*)*((int*)*((int*)*(((int*)*(((int*)0x00905A4D) + 0x1D1FE0C)) + 0x10)) + 0x134) + 0x30);
-					Console.WriteLine(p1kills);
-				}
-				Thread.Sleep(50);
-			}
-			*/
 		}
 	}
 }
