@@ -40,7 +40,7 @@ namespace WGRDShowDestructionPoints
 
 			int newKills = 0;
 
-			bool shouldRefresh = false;
+			bool shouldRefresh = true;
 
 			while(true)
 			{
@@ -57,7 +57,7 @@ namespace WGRDShowDestructionPoints
 				ReadProcessMemory(handle, p1KillsP, buffer, buffer.Length, out bytesRead);
 
 				newKills = BitConverter.ToInt32(buffer, 0);
-				if(newKills > p1Kills)
+				if(newKills != p1Kills)
 				{
 					p1Kills = newKills;
 					shouldRefresh = true;
@@ -75,7 +75,7 @@ namespace WGRDShowDestructionPoints
 				ReadProcessMemory(handle, p2KillsP, buffer, buffer.Length, out bytesRead);
 
 				newKills = BitConverter.ToInt32(buffer, 0);
-				if (newKills > p2Kills)
+				if (newKills != p2Kills)
 				{
 					p2Kills = newKills;
 					shouldRefresh = true;
