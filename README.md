@@ -10,3 +10,5 @@ How to use it:
 Download it and run it once WarGame is already running. Again, make sure WarGame is already running or the program will just auto-close itself.
 
 If somebody wants to make an overlay, be my guest.
+
+Windows only unfortunately.
